@@ -1,0 +1,68 @@
+/* Overlay effect */
+#overlay-screen {
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.5); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9; /* Just to keep it at the very top */
+  display: none;
+  opacity: 0;
+
+  -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+}
+
+#overlay-screen.load {
+  display: block;
+  opacity: 1;
+}
+
+/* The side navigation menu */
+#side-nav-menu {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #646464; /* Black*/
+  box-shadow: 0px 19px 19px 0px rgba(0,0,0,0.3), 0px 15px 6px 0px rgba(0,0,0,0.22);
+}
+
+/* The navigation menu links */
+#side-nav-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+#side-nav-menu a:hover {
+  color: #c8c8c8;
+}
+
+#menu-close {
+  text-align: right;
+}
+
+#page {
+  max-width: 60em;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
